@@ -4,9 +4,9 @@ import './Form.css';
 export class form extends Component {
      constructor(props){
      super(props);
-     this.state = {from:'',to:'',amount:0}
+     this.state = {from:'USD',to:'GBP',amount:0}
 }
-convertFrom = (e)=>{console.log(this.state);this.setState({from:e.target.value});}
+convertFrom = (e)=>{this.setState({from:e.target.value});}
 convertTo = (e)=>{this.setState({to:e.target.value})}
 amount = (e)=>{this.setState({amount:e.target.value})}
 submit = (e)=>{this.props.submitted(this.state); e.preventDefault();}

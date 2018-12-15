@@ -17,7 +17,7 @@ class App extends Component {
   submit = (userInput)=>{this.setState({from:userInput.from,to:userInput.to,amount:userInput.amount});
    var f= userInput.from;
   var url ='https://api.exchangeratesapi.io/latest?base='+f+''
-  console.log(url)
+  
   fetch(url)
    .then(response => response.json())
    .then((data)=>{ this.setState({rate:data.rates,base:data.base})}) }
